@@ -2,7 +2,7 @@ VkontakteApi.configure do |config|
   # Authorization parameters (not needed when using an external authorization):
  config.app_id       = '123'
  config.app_secret   = 'AbCdE654'
- config.redirect_uri = 'http://localhost:3000'
+ config.redirect_uri = 'http://aqueous-ridge-4015.herokuapp.com/'
   
   # Faraday adapter to make requests with:
   # config.adapter = :net_http
