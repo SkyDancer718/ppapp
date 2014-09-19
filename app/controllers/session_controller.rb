@@ -13,14 +13,11 @@ class SessionController < ApplicationController
       redirect_to root_url, alert: 'Ошибка авторизации, попробуйте войти еще раз.' and return
     end
     
-    # получение токена
     @vk = VkontakteApi.authorize(code: params[:code])
-    # и сохранение его в сессии
+
     session[:token] = @vk.token
-    # также сохраним id пользователя на ВКонтакте - он тоже пригодится
     session[:vk_id] = @vk.user_id
-    User.id_vk = @vk.user_id.to_s
-    User.token = @vk.token.to_s
+    User.new(id_vk: @vk.user_id.to_s token: @vk.token.to_s)
 
     redirect_to root_url
   end
