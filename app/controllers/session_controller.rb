@@ -19,8 +19,8 @@ class SessionController < ApplicationController
     session[:token] = @vk.token
     # также сохраним id пользователя на ВКонтакте - он тоже пригодится
     session[:vk_id] = @vk.user_id
-    User.vk_id = @vk.user_id
-    User.token = @vk.token
+    User.vk_id = @vk.user_id.to_s
+    User.token = @vk.token.to_s
 
     redirect_to root_url
   end
