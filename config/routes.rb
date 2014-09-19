@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
 
-  get 'session/new'
+  resources :users
+
+  match 'session/new', to: 'session#new', via: 'get'
+
+  match 'session/callback', to: 'session#callback', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root "session#new"
+root "session#new"
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
