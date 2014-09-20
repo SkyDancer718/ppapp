@@ -7,8 +7,8 @@ class SessionController < ApplicationController
     @vk_url = VkontakteApi.authorization_url(scope: [:friends, :groups, :offline, :notify], state: session[:state])
   end
 
-  def callback
-    # проверка state
+  def create
+
     if session[:state].present? && session[:state] != params[:state]
       redirect_to root_url, alert: 'Ошибка авторизации, попробуйте войти еще раз.' and return
     end

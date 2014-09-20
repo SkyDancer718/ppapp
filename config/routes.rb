@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   resources :users
 
-  match 'session/new', to: 'session#new', via: 'get'
+  match 'session/new', to: 'session#new', via: 'GET'
 
-  match 'session/callback', to: 'session#callback', via: 'put'
+  match 'session/callback', to: 'session#create', via: [:POST]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
