@@ -18,7 +18,7 @@ class SessionController < ApplicationController
     session[:token] = @vk.token
     session[:vk_id] = @vk.user_id
 
-    @staff = {token: session[:token], id: session[:id]}
+    @staff = {token: session[:token], id: session[:vk_id]}
     #User.new(id_vk: @vk.user_id.to_s, token: @vk.token.to_s)
     flash[:success] = @vk.token.to_s
   end
