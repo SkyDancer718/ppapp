@@ -5,7 +5,7 @@
   Войти через ВКонтакте
 <% end %>
 
-<%unless @staff.nil?%>
+<%if @staff.nil?%>
 <%=@staff.id%>
 <%=@staff.token%>
 <%end%>
