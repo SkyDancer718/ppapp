@@ -9,9 +9,9 @@ class SessionController < ApplicationController
 
   def create
 
-    if session[:state].present? && session[:state] != params[:state]
-      redirect_to root_url, alert: 'Ошибка авторизации, попробуйте войти еще раз.' and return
-    end
+    #if session[:state].present? && session[:state] != params[:state]
+    #  redirect_to root_url, alert: 'Ошибка авторизации, попробуйте войти еще раз.' and return
+    #end
     
     @vk = VkontakteApi.authorize(code: params[:code])
 
