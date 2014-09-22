@@ -5,11 +5,6 @@ class SessionController < ApplicationController
     session[:state] ||= Digest::MD5.hexdigest(rand.to_s)
     # и URL страницы авторизации
     @vk_url = VkontakteApi.authorization_url(scope: [:friends, :groups, :offline, :notify], state: session[:state])
-    
-    unless @vk.nil?
-    flash[:success] = @vk.token.to_s
-	end
-	
   end
 
   def create
@@ -23,12 +18,8 @@ class SessionController < ApplicationController
     session[:token] = @vk.token
     session[:vk_id] = @vk.user_id
 
-    
-
     @staff = {token: session[:token], id: session[:id]}
     #User.new(id_vk: @vk.user_id.to_s, token: @vk.token.to_s)
-
-    redirect_to root_url
     flash[:success] = @vk.token.to_s
   end
 
