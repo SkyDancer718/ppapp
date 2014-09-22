@@ -14,8 +14,7 @@
 ActiveRecord::Schema.define(version: 20140919023746) do
 
   create_table "users", force: true do |t|
-    t.string   "name"
-    t.string   "id_vk"
+    t.string   "vk_id"
     t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
