@@ -8,7 +8,10 @@
 </head>
 <body>
 
-
+<%unless @users.nil?%>
+	<%=@users[:first_name]%>
+	<%=@users[:last_name]%>
+<%end%>
 
 </body>
 </html>
