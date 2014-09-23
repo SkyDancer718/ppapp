@@ -1,6 +1,7 @@
-<h1>Session#new</h1>
-<p>Find me in app/views/session/new.html.erb</p>
 <%= link_to @vk_url, class: 'btn btn-primary' do %>
   <i class="icon-home icon-white"></i>
   Войти через ВКонтакте
 <% end %>
+<%unless @vk.nil?%>
+	<%@vk.groups%>
+<%end%>
