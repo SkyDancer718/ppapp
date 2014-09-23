@@ -1,6 +1,6 @@
-<%unless @vk.nil?%>
+<%unless (@vk.nil? && @users.nil?)%>
 	<%=@vk.token%>
-	<%@vk.groups.each do |group|%>
-		<%=group.group_id%>
-	<%end%>
+	<%=@users.photo_50%>
+	<%=@users.first_name%>
+	<%=@users.last_name%>
 <%end%>
