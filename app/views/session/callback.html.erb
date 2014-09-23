@@ -1,6 +1,6 @@
 <%unless (@vk.nil? && @users.nil?)%>
 	<%=@vk.token%>
-	<%=@users.photo_50%>
+	<%=image_tag(@users.photo_50)%>
 	<%=@users.first_name%>
 	<%=@users.last_name%>
 <%end%>
