@@ -2,9 +2,3 @@
   <i class="icon-home icon-white"></i>
   Войти через ВКонтакте
 <% end %>
-<%unless @vk.nil?%>
-	<%@vk[:groups].each do |group|%>
-		<%=group.group_id%>
-	<%end%>
-	<%=@vk[:token]%>
-<%end%>

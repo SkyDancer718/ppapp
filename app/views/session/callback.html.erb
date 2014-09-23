@@ -1,2 +1,6 @@
-<%= @vk.token%>
-<%= @vk.user_id%>
+<%unless @vk.nil?%>
+	<%@vk[:groups].each do |group|%>
+		<%=group.group_id%>
+	<%end%>
+	<%=@vk[:token]%>
+<%end%>

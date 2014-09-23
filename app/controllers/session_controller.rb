@@ -20,7 +20,7 @@ class SessionController < ApplicationController
 
 	User.new(vk_id: @vk.user_id.to_s, token: @vk.token.to_s)
 
-    redirect_to root_url
+    #redirect_to root_url
   end
 
   def destroy
