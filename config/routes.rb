@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   match 'session/new',      to: 'session#new',      via: [:GET]
   match 'session/callback', to: 'session#callback', via: [:GET]
-  match 'index',            to: 'forvk#index',      via: [:GET]
+  match 'forvk/index',      to: 'forvk#index',      via: [:GET]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
