@@ -3,5 +3,8 @@
   Войти через ВКонтакте
 <% end %>
 <%unless @vk.nil?%>
-	<%=@vk[:groups]%>
+	<%@vk[:groups].each do |group|%>
+		<%=group.group_id%>
+	<%end%>
+	<%=@vk[:token]%>
 <%end%>
