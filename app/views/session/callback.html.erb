@@ -1,6 +1,7 @@
+<%@users.each do |user|%>
 <div class="logo">
-<%unless @users.nil?%>
-	<%=@users[:first_name]%>
-	<%=@users[:last_name]%>
-<%end%>
+<%=image_tag(user[:photo_max], class: "img")%>
+<%=user[:first_name]%>
+<%=user[:last_name]%>
 </div>
+<%end%>
