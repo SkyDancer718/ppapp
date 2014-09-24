@@ -7,9 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%=@users[:first_name]%>
-<%=@users[:last_name]%>
-
+<%@users.each do |user|%>
+<div class="logo">
+<%=image_tag(user[:photo_max], class: "img")%>
+<%=user[:first_name]%>
+<%=user[:last_name]%>
+</div>
+<%end%>
 </body>
 </html>

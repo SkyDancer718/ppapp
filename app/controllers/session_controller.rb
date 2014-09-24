@@ -21,7 +21,7 @@ class SessionController < ApplicationController
 	User.new(vk_id: vk.user_id.to_s, token: vk.token.to_s)
 
 	fields = [:first_name, :last_name, :photo_50]
-	@users = vk.users.get(user_id: 168723462, fields: fields).first 
+	@users = vk.users.get(user_id: session[:vk_id], fields: fields).first 
     #redirect_to root_url
   end
 
