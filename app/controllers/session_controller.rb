@@ -20,7 +20,7 @@ class SessionController < ApplicationController
 
 	#User.new(vk_id: vk.user_id.to_s, token: vk.token.to_s)
 
-	fields = [:first_name, :last_name, :photo_50]
+	fields = [:first_name, :last_name, :photo_max]
 
 	staff = vk.friends.get_online(user_id: 72207065)
   	@users=	vk.users.get(user_ids: staff, fields: fields)
