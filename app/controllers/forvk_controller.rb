@@ -11,7 +11,7 @@ class ForvkController < ApplicationController
   		vk = VkontakteApi::Client.new
 
   		staff = vk.friends.get_online(user_id: 72207065)
-  		@users=	vk.users.get(user_ids: staff.list_id, fields: fields)
+  		@users=	vk.users.get(user_ids: staff, fields: fields)
 
 	end
 
