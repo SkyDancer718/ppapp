@@ -22,7 +22,6 @@ VkontakteApi.configure do |config|
   
   # log response JSON after successful responses
   # config.log_responses = false
-  config.api_version = '5.24'
 end
 
 # create a short alias VK for VkontakteApi module
