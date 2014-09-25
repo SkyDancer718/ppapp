@@ -26,6 +26,18 @@
  	 border-radius:5px;
  	 float:left;
  	}
-  	 .img{
 
- 	 }
+ .user{
+ 	 width:250px;
+ 	 height:54px;
+ 	 border:1px solid black;
+ 	 border-radius:5px;
+ 	 background-color: white;
+ 	 position: fixed;
+ 	 margin-left: 85%;
+ }
+
+ .img_cur{
+ 	float:left;
+ 	margin: 2px;
+ }

@@ -23,7 +23,10 @@ class SessionController < ApplicationController
 	fields = [:first_name, :last_name, :photo_max]
 
 	staff = vk.friends.get_online(user_id: 29606292)
-  	@users=	vk.users.get(user_ids: staff, fields: fields)
+  @users=	vk.users.get(user_ids: staff, fields: fields)
+
+  fields = [:first_name, :last_name, :photo_50]
+  @cur_user = vk.users.get(user_id: session[:vk_id], fields: fields).first
 	#@users = vk.users.get(user_id: session[:vk_id], fields: fields).first 
     #redirect_to root_url
   end

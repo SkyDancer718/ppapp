@@ -1,3 +1,5 @@
+<h1>БЛЯДСКИЙ ЗАГОЛОВОК, ИБО ЧЕ КАК ЛОХИ СИДИМ</h1>
+
 <%@users.each do |user|%>
 <div class="logo">
 <%=image_tag(user[:photo_max], class: "img")%>
@@ -5,3 +7,9 @@
 <%=user[:last_name]%>
 </div>
 <%end%>
+
+<div class="user">
+<%=image_tag(@cur_user[:photo_50], class: "img_cur")%>
+<%=@cur_user[:first_name]%>
+<%=@cur_user[:last_name]%>
+</div>
