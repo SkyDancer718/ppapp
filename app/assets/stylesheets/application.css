@@ -13,14 +13,14 @@
  *= require_tree .
  *= require_self
  */
- .session_user{
+ .session_bar{
  	 width:250px;
  	 height:54px;
  	 border:1px solid black;
  	 border-radius:5px;
  	 background-color: white;
  	 position: fixed;
- 	 margin-left: 85%;
+ 	 margin-left: 80%;
  }
 
  .img_cur{
