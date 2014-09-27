@@ -10,6 +10,6 @@
 
 <div class="user">
 <%=image_tag(@cur_user[:photo_50], class: "img_cur")%>
-<%=@cur_user[:first_name]%>
-<%=@cur_user[:last_name]%>
+<%= link_to @cur_user[:first_name] + @cur_user[:last_name], 
+				"vk.com/id+#{session[:vk_id]}", :target => "_blank" %>
 </div>
