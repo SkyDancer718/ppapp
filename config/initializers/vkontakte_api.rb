@@ -2,7 +2,7 @@ VkontakteApi.configure do |config|
   # Authorization parameters (not needed when using an external authorization):
  config.app_id       = '4555065'
  config.app_secret   = '9xaavputwSPmdEbaCBE4'
- config.redirect_uri = 'http://aqueous-ridge-4015.herokuapp.com/session/callback'
+ config.redirect_uri = 'http://aqueous-ridge-4015.herokuapp.com/vk_callback'
   
   # Faraday adapter to make requests with:
   # config.adapter = :net_http
