@@ -43,7 +43,9 @@ class LikesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_like
-      @like = Like.where(:hero_id session[:id], :victim_id like_params)
+      unless session[:id].nil?
+        @like = Like.where(:hero_id session[:id], :victim_id like_params)
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
