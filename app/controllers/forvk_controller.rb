@@ -12,13 +12,15 @@ class ForvkController < ApplicationController
 		9106288, 291062, 2910627, 39106373, 31105420,
 		9106288, 291062, 2910627, 39106184, 31106520]
 
-  		vk = VkontakteApi::Client.new
+  		#vk = VkontakteApi::Client.new
 
   		#staff = vk.friends.get_online(user_id: 72207065)
-  		@users=	vk.users.get(user_ids: staff, fields: fields)
+  		#@users=	vk.users.get(user_ids: staff, fields: fields)
 
   		fields = [:first_name, :last_name, :photo_50]
-  		@cur_user = vk.users.get(user_id: 72207065, fields: fields).first
+  		#@cur_user = vk.users.get(user_id: 72207065, fields: fields).first
 	end
+
+
 
 end

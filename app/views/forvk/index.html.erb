@@ -7,26 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= link_to "like", likes_path(user_id: 1), remote: true, method: :post %>
+
 <h1>ЗАГОЛОВОК</h1>
-
-<%@users.each do |user|%>
- <div class="user">
-	 <%=image_tag(user[:photo_max], class: "img")%>
-	 <%=user[:first_name]%>
-	 <%=user[:last_name]%>
-     <div class="navi_bar">
-		 <div class="fake"></div>
-		 <div class="like"></div>
-		 <div class="add" ></div>
-     </div>
- </div>
-<%end%>
-
-<div class="session_bar">
-<%=image_tag(@cur_user[:photo_50], class: "img_cur")%>
-<%= link_to @cur_user[:first_name] + @cur_user[:last_name], 
-				"vk.com/id+#{session[:vk_id]}", :target => "_blank" %>
-</div>
-
 </body>
 </html>

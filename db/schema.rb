@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919023746) do
+ActiveRecord::Schema.define(version: 20140930074951) do
+
+  create_table "likes", id: false, force: true do |t|
+    t.integer  "hero_id"
+    t.integer  "victim_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "likes", ["hero_id", "victim_id"], name: "index_likes_on_hero_id_and_victim_id", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "vk_id"

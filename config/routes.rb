@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :likes do
+    get :new
+  end
+
   resources :users
 
   match 'session/new',      to: 'session#new',      via: [:GET]
   match 'session/callback', to: 'session#callback', via: [:GET]
   match 'forvk/index',      to: 'forvk#index',      via: [:GET]
+  match 'qwe',              to: 'like#qwe',         via: [:POST]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
