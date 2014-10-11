@@ -1,23 +1,22 @@
-<h1>Listing users</h1>
+<h1>ЗАГОЛОВОК</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<%= link_to "like_Test", user_id: 001, remote: true, method: :like %>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%@users.each do |user|%>
+ <div class="user">
+   <%=image_tag(user[:photo_max], class: "img")%>
+   <%=user[:first_name]%>
+   <%=user[:last_name]%>
+     <div class="navi_bar">
+     <div class="fake"></div>
+     <div class="like"></div>
+     <div class="add" ></div>
+     </div>
+ </div>
+<%end%>
 
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<div class="session_bar">
+<%=image_tag(@cur_user[:photo_50], class: "img_cur")%>
+<%= link_to @cur_user[:first_name] + @cur_user[:last_name], 
+        "http://www.vk.com/id#{session[:vk_id]}", :target => "_blank" %>
+</div> 

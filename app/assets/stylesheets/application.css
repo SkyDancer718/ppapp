@@ -13,6 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ body{
+ 	margin:0px;
+ 	padding: 0px;
+ }
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+a:hover{
+	color: orange;
+}
+
  .session_bar{
  	 width:250px;
  	 height:54px;
@@ -27,3 +41,28 @@
  	float:left;
  	margin: 2px;
  }
+
+ .user{
+ margin: 2px;
+ padding:2px;
+ width:200px;
+ height:220px;
+ border:1px solid black;
+ border-radius:5px;
+ float:left;
+ background-color: white;
+ position: static;
+    .navi_bar{
+ 	 position: relative;
+ 	 margin-top: -215px;
+ 	 margin-left: 170px;
+ 		div{
+ 	 	 width:25px;
+ 	 	 height:25px;	
+ 	 	 border:1px solid black;
+ 	 	 border-radius:5px;
+ 	 	 margin-top: 3px;
+ 	 	 background-color: grey;
+ 		}
+ 	}		
+}
