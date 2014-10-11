@@ -23,11 +23,15 @@ class LikesController < ApplicationController
   # POST /likes
   # POST /likes.json
   def create
-    unless @like.nil?
-      Like.new(@like).save
+  unless session[:id].nil?
+       
+    unless Like.where(:hero_id session[:id]).nil?
+      Like.new(hero_id: session[:id], victim_id: 555).save
     else
       @like.destroy
     end
+
+  end
   end
 
   # PATCH/PUT /likes/1
@@ -43,13 +47,11 @@ class LikesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_like
-      unless session[:id].nil?
-        @like = Like.where(:hero_id session[:id])
-      end
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def like_params
-      params.require(:like).permit(:victim_id)
+
     end
 end
