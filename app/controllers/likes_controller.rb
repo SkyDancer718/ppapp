@@ -23,7 +23,7 @@ class LikesController < ApplicationController
   # POST /likes
   # POST /likes.json
   def create
-    unless Like.find(:hero_id session[:id]).nil?
+    unless Like.where(hero_id: session[:id]).nil?
       Like.new(hero_id: session[:id], victim_id: 555).save
     else
       @like.destroy
